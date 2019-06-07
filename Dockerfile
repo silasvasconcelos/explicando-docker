@@ -6,6 +6,7 @@ RUN apt-get update && apt-get install -f -y && apt-get install apache2 php libap
 
 WORKDIR /var/www/html
 
+RUN rm /var/www/html/index.html
 COPY index.php /var/www/html
 EXPOSE 80
 
